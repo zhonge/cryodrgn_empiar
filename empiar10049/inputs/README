@@ -1,0 +1,10 @@
+# This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10049
+
+# Download EMPIAR-10049 particles, then move the downloaded .mrcs files to this directory
+ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10049 .
+mv 10049/data/ragSEC_150309.mrcs .
+mv 10049/data/ragSEC_150311.mrcs .
+
+# Extract pose and ctf information from cryoSPARC refinement
+cryodrgn parse_ctf_csparc cryosparc_P53_J26_006_particles.cs -o ctf.pkl
+cryodrgn parse_pose_csparc cryosparc_P53_J26_006_particles.cs -D 192 -o poses.pkl

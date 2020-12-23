@@ -1,0 +1,12 @@
+# This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10180
+
+# Download EMPIAR-10180 particles, then move the downloaded .star file to this directory
+ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10180 .
+mv 10180/data/Example/consensus_data.star .
+
+# Downsample to D=256
+cryodrgn dowsample consensus_data.star --datadir 10180/data -D 256 -o particles.256.mrcs --chunk 50000
+
+# Extract pose and ctf information from RELION consensus refinement
+cryodrgn parse_pose_star consensus_data.star -D 320 -o poses.pkl 
+cryodrgn parse_ctf_star consensus_data.star -D 320 --Apix 1.7 -o ctf.pkl 
