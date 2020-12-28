@@ -1,17 +1,16 @@
 # cryodrgn_biorxiv2020
 
-This repository contains input files and commands for reproducing the cryoDRGN heterogeneous reconstruction experiments in Zhong et al. (https://www.biorxiv.org/content/10.1101/2020.03.27.003871v1). 
+This repository contains input files and commands for reproducing the cryoDRGN heterogeneous reconstruction experiments in [Zhong et al](https://www.biorxiv.org/content/10.1101/2020.03.27.003871v1). 
 
 The outputs of the experiments (trained models and reconstructed volumes), which are too large to put in a github repository, can be found on zenodo (link).
 
-Each directory describes one of the analyzed datasets and all required inputs excluding particle images, which can be downloaded from EMPIAR (https://www.ebi.ac.uk/pdbe/emdb/empiar/). 
+Each directory describes one of the analyzed datasets and all required inputs excluding particle images, which can be downloaded from [EMPIAR](https://www.ebi.ac.uk/pdbe/emdb/empiar/). 
 The commands provided here are compatible with cryodrgn version 0.3.0. The commands that were used to preprocess the input files are described in a `README` file in the `inputs` directory. The command to run cryodrgn is provided in the `run.sh` executable.
 
 ## EMPIAR-10028: Pf80S ribosome
 
 Primary reference: 
-Wong, W. et al. Cryo-EM structure of the Plasmodium falciparum 80S ribosome bound to the anti-protozoan drug emetine. Elife 3, e01963 (2014).
-https://elifesciences.org/articles/03080
+[Wong, W. et al. Cryo-EM structure of the Plasmodium falciparum 80S ribosome bound to the anti-protozoan drug emetine. Elife 3, e01963 (2014).](https://elifesciences.org/articles/03080)
 
 ### Pre-procesing inputs
 
