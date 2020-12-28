@@ -21,7 +21,7 @@ $ cat empiar10028/inputs/README
 # Download EMPIAR-10028 particles (~51GB)
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10028 .
 
-# Downsample dataset
+# Downsample dataset (~26GB)
 cryodrgn downsample shiny_2sets.star --datadir 10028/data -D 256 -o particles.256.mrcs -D 50000
 
 # Extract pose and ctf information from cryoSPARC refinement
@@ -90,7 +90,7 @@ $ cat empiar10076/inputs/README
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10076 .
 mv 10076/data/L17Combine_weight_local.mrc L17Combine_weight_local.mrcs
 
-# Downsample images to D=256
+# Downsample images to D=256 (~33GB)
 cryodrgn downsample Parameters.star -D 256 -o particles.256.mrcs --chunk 50000
 
 # Extract pose and ctf information from cryoSPARC refinement
@@ -126,7 +126,7 @@ $ cat empiar10180/inputs/README
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10180 .
 mv 10180/data/Example/consensus_data.star .
 
-# Downsample to D=256
+# Downsample to D=256 (~80GB)
 cryodrgn dowsample consensus_data.star --datadir 10180/data -D 256 -o particles.256.mrcs --chunk 50000
 
 # Extract pose and ctf information from RELION consensus refinement
