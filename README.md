@@ -18,7 +18,7 @@ Primary reference:
 $ cat empiar10028/inputs/README
 # This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10028
 
-# Download EMPIAR-10028 particles, then move the downloaded .mrcs files to this directory
+# Download EMPIAR-10028 particles (~51GB)
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10028 .
 
 # Downsample dataset
@@ -53,7 +53,7 @@ Primary reference:
 $ cat empiar10049/inputs/README
 # This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10049
 
-# Download EMPIAR-10049 particles, then move the downloaded .mrcs files to this directory
+# Download EMPIAR-10049 particles (~66 GB), then move the downloaded .mrcs files to this directory
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10049 .
 mv 10049/data/ragSEC_150309.mrcs .
 mv 10049/data/ragSEC_150311.mrcs .
@@ -86,7 +86,7 @@ Primary reference:
 $ cat empiar10076/inputs/README
 # This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10076
 
-# Download EMPIAR-10076 particles, then move the downloaded .mrc file to this directory
+# Download EMPIAR-10076 particles (~51GB), then move the downloaded .mrc file to this directory
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10076 .
 mv 10076/data/L17Combine_weight_local.mrc L17Combine_weight_local.mrcs
 
@@ -122,7 +122,7 @@ Primary reference:
 $ cat empiar10180/inputs/README
 # This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10180
 
-# Download EMPIAR-10180 particles, then move the downloaded .star file to this directory
+# Download EMPIAR-10180 particles (~127GB), then move the downloaded .star file to this directory 
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10180 .
 mv 10180/data/Example/consensus_data.star .
 
