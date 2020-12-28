@@ -2,10 +2,10 @@
 
 This repository contains input files and commands for reproducing the cryoDRGN heterogeneous reconstruction experiments in [Zhong et al](https://www.biorxiv.org/content/10.1101/2020.03.27.003871v1). 
 
-The outputs of the experiments (trained models and reconstructed volumes), which are too large to put in a github repository, can be found on zenodo (link).
-
 Each directory describes one of the analyzed datasets and all required inputs excluding particle images, which can be downloaded from [EMPIAR](https://www.ebi.ac.uk/pdbe/emdb/empiar/). 
 The commands provided here are compatible with cryodrgn version 0.3.0. The commands that were used to preprocess the input files are described in a `README` file in the `inputs` directory. The command to run cryodrgn is provided in the `run.sh` executable.
+
+The outputs of the experiments (trained models and reconstructed volumes), which are too large to put in a github repository, can be found on zenodo (link).
 
 ## EMPIAR-10028: Pf80S ribosome
 
@@ -45,7 +45,7 @@ cryodrgn train_vae $PARTICLES --poses $POSES --ctf $CTF --ind $IND -o $OUTDIR --
 ## EMPIAR-10049: RAG1-RAG2 complex
 
 Primary reference: 
-Ru, H. et al. Molecular Mechanism of V(D)J Recombination from Synaptic RAG1-RAG2 Complex Structures. Cell 163, 1138–1152 (2015).
+[Ru, H. et al. Molecular Mechanism of V(D)J Recombination from Synaptic RAG1-RAG2 Complex Structures. Cell 163, 1138–1152 (2015).](https://pubmed.ncbi.nlm.nih.gov/26548953/)
 
 ### Pre-procesing inputs
 
@@ -78,7 +78,7 @@ cryodrgn train_vae $PARTICLES --poses $POSES --ctf $CTF -o $OUTDIR --zdim 10 --e
 ## EMPIAR-10076: Assembling bacterial 50S ribosome
 
 Primary reference: 
-1. Davis, J. H. et al. Modular Assembly of the Bacterial Large Ribosomal Subunit. Cell 167, 1610--1622.e15 (2016).
+[Davis, J. H. et al. Modular Assembly of the Bacterial Large Ribosomal Subunit. Cell 167, 1610--1622.e15 (2016).](https://pubmed.ncbi.nlm.nih.gov/27912064/)
 
 ### Pre-procesing inputs
 
@@ -114,7 +114,7 @@ cryodrgn train_vae $PARTICLES --ctf $CTF --poses $POSES --ind $IND -o $OUTDIR --
 ## EMPIAR-10180: Pre-catalytic spliceosome
 
 Primary reference: 
-1. Plaschka, C., Lin, P.-C. & Nagai, K. Structure of a pre-catalytic spliceosome. Nature 546, 617–621 (2017).
+[Plaschka, C., Lin, P.-C. & Nagai, K. Structure of a pre-catalytic spliceosome. Nature 546, 617–621 (2017).](https://www.nature.com/articles/nature22799)
 
 ### Pre-procesing inputs
 
