@@ -1,6 +1,6 @@
 # This directory contains all input files for cryodrgn training except for the particle stack from EMPIAR-10028
 
-# Download EMPIAR-10028 particles, then move the downloaded .mrcs files to this directory
+# Download EMPIAR-10028 particles
 ascp -QT -l 200M -P33001 -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh emp_ext3@hx-fasp-1.ebi.ac.uk:/10028 .
 
 # Downsample dataset 
