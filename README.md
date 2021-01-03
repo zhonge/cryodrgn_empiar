@@ -1,19 +1,10 @@
-# EMPIAR inputs for cryoDRGN :snowflake: :dragon: reconstruction
+# :snowflake: :dragon: cryoDRGN reconstruction of EMPIAR datasets
 
 This repository contains input files and commands for reproducing the cryoDRGN heterogeneous reconstruction experiments in [Zhong et al](https://www.biorxiv.org/content/10.1101/2020.03.27.003871v1). 
 
-Each directory describes one of the analyzed datasets and includes all required inputs for training excluding the particle images, which may be downloaded from [EMPIAR](https://www.ebi.ac.uk/pdbe/emdb/empiar/). 
-The commands that were used to preprocess the input files are described in a `README` file in the `inputs` directory:
+Each directory describes one of the analyzed datasets and includes all required inputs for training excluding the particle images, which may be downloaded from [EMPIAR](https://www.ebi.ac.uk/pdbe/emdb/empiar/). The commands provided here are compatible with cryodrgn version `0.3` and have been slightly modified to use updated best practices (e.g. `--zdim 8` instead of `--zdim 10`, real-space particle windowing) and lead to qualitatively identical results (to our knowledge). The exact settings used in the original study can be found in `config.pkl` file associated with the trained models.
 
-`$ ls empiar*/inputs/README`
-
-The command to train a cryodrgn model is provided as a `run.sh` executable: 
-
-`$ ls empiar*/run.sh`
-  
-The commands provided here are compatible with cryodrgn version `0.3.0b` and has been modified to use updated best practices (e.g. `--zdim 8` instead of `--zdim 10`, real-space particle windowing) and lead to qualitatively identical results (to our knowledge). The exact settings used in the original study can be found in `config.pkl` file associated with the trained models.
-
-The outputs of the experiments (trained models and reconstructed volumes), which are too large to put in a github repository, can be found on zenodo (link).
+The outputs of the experiments (trained models and reconstructed volumes), which are too large to put in a github repository, can be found on [zenodo](https://doi.org/10.5281/zenodo.4355284).
 
 ## EMPIAR-10028: Pf80S ribosome
 
